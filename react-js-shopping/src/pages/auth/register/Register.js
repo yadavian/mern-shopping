@@ -43,7 +43,11 @@ const Register = () => {
       if (res.success) {
         setFormValues(initialState)
         alert(res.msg)
-        navigate('/auth/send-otp')
+        navigate('/auth/send-otp', {
+          state: {
+            phoneNumber: formValues.phoneNumber
+          }
+        })
       } else {
         alert(res.msg)
         // return { status: true, message: "Something went wrong please try again !!" };

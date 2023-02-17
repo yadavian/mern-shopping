@@ -89,18 +89,7 @@ const userLogin = async (req, res) => {
 
 const userUpdateProfile = async (req, res) => {
     const { password, ...others } = req.body;
-    
-    console.log('>>>>>>>>>>>>>>>>>>')
-    console.log('req.body', req.body)
-    
-    console.log('>>>>>>>>>>>>>>>>>>')
-    console.log('req.file', req.files)
-
     const updatedProfile = { ...others, profileImage: `profile-images/${req.file.filename}` }
-
-    console.log('>>>>>>>>>>>>>>>>>>')
-    console.log('>>>>updatedProfile', updatedProfile)
-
     try {
         const updateBook = await userModel.findByIdAndUpdate(
             req.params.id,

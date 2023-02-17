@@ -1,12 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
+
+  const location = useLocation();
   const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
-    phoneNumber: "",
-    otp: "",
+    phoneNumber: location.state.phoneNumber,
+    otp: "12345",
   })
 
   const handleLoginSubmit = async (e) => {
@@ -49,11 +52,11 @@ const Login = () => {
                 type="number"
                 className="form-control"
                 value={formValues.phoneNumber}
-                onChange={(e) => setFormValues({ ...formValues, phoneNumber: e.target.value })} />
+                onChange={(e) => setFormValues({ ...formValues, phoneNumber: e.target.value })} disabled/>
             </div>
             <div className="mb-3">
               <label className="form-label">Enter OTP</label>
-              <input type="text" className="form-control" value={formValues.otp} onChange={(e) => setFormValues({ ...formValues, otp: e.target.value })} />
+              <input type="text" className="form-control" value={formValues.otp} onChange={(e) => setFormValues({ ...formValues, otp: e.target.value })} disabled/>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Link to='/auth/register'>Back to Register</Link>

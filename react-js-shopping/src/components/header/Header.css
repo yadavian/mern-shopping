@@ -1,0 +1,21 @@
+.header-section {
+  width: 100vw;
+  /* background-color: #f00; */
+  /* background: linear-gradient(90deg, #f00 50% , #036 50%); */
+  background: linear-gradient(90deg, #f00 30%, #036 70%);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-items a {
+  margin: 0rem 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.header-kotak {
+  background: linear-gradient(90deg, #f00 30%, #036 70%);
+  color: #ffffff;
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "start": "concurrently \"cd node-js-shopping && npm start\" \"cd react-js-shopping && npm start\""
+  }
+}

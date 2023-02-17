@@ -1,0 +1,7 @@
+.product__item {
+  display: flex; 
+  border: 1px solid grey;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem; 
+}

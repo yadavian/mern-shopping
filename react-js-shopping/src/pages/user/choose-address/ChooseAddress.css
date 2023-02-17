@@ -1,0 +1,13 @@
+.address-item-box {
+    padding: 1rem 5rem;
+}
+
+.choose-address-box {
+    border: 1px solid #D5D9D9;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.choose-address-section {
+    margin-top: 3rem;
+}
